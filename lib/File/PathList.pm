@@ -4,15 +4,15 @@ package File::PathList;
 
 =head1 NAME
 
-File::MultiPath - Find a file within a set of paths (like @INC or Java classpaths)
+File::PathList - Find a file within a set of paths (like @INC or Java classpaths)
 
 =head1 SYNOPSIS
 
   # Create a basic pathset
-  my $inc  = File::MultiPath->new( \@INC );
+  my $inc  = File::PathList->new( \@INC );
   
   # Again, but with more explicit params
-  my $inc2 = File::MultiPath->new(
+  my $inc2 = File::PathList->new(
   	paths => \@INC,
   	cache => 1,
   	);
@@ -53,6 +53,7 @@ method.
 
 =cut
 
+use 5.005;
 use strict;
 use File::Spec       ();
 use File::Spec::Unix ();
@@ -60,7 +61,7 @@ use Params::Util     qw{_ARRAY _CODE};
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.01';
+	$VERSION = '0.02';
 }
 
 
@@ -220,13 +221,13 @@ sub find_file {
 
 Bugs should always be submitted via the CPAN bug tracker
 
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-PathSet>
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=File-PathList>
 
 For other issues, contact the maintainer
 
 =head1 AUTHOR
 
-Adam Kennedy E<lt>cpan@ali.asE<gt>, L<http://ali.as/>
+Adam Kennedy E<lt>cpan@ali.asE<gt>
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -235,7 +236,7 @@ the open sourcing and release of this distribution.
 
 =head1 COPYRIGHT
 
-Copyright (c) 2005 Adam Kennedy. All rights reserved.
+Copyright (c) 2005 - 2006 Adam Kennedy. All rights reserved.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
