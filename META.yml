@@ -1,18 +1,21 @@
-
+--- 
+abstract: Find a file within a set of paths (like @INC or Java classpaths)
+author: Adam Kennedy <cpan@ali.as>
+build_requires: 
+  Test::More: 0.47
+distribution_type: module
+generated_by: Module::Install version 0.67
+license: perl
+meta-spec: 
+  url: http://module-build.sourceforge.net/META-spec-v1.3.html
+  version: 1.3
+name: File-PathList
 no_index: 
   directory: 
     - inc
     - t
-generated_by: Module::Install version 0.57
-distribution_type: module
-version: 0.02
-name: File-PathList
-author: Adam Kennedy <cpan@ali.as>
-license: perl
-build_requires: 
-  Test::More: 0.47
 requires: 
-  perl: 5.005
-  Params::Util: 0.05
   File::Spec: 0.80
-abstract: Find a file within a set of paths (like @INC or Java classpaths)
+  Params::Util: 0.05
+  perl: 5.005
+version: 0.03
