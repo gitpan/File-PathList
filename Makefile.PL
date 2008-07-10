@@ -1,10 +1,8 @@
-use strict;
-use inc::Module::Install;
+use inc::Module::Install 0.76;
 
-name           'File-PathList';
-all_from       'lib/File/PathList.pm';
-requires       'File::Spec'      => '0.80';
-requires       'Params::Util'    => '0.05';
-build_requires 'Test::More'      => '0.47';
+all_from      'lib/File/PathList.pm';
+requires      'File::Spec'      => '0.80';
+requires      'Params::Util'    => '0.24';
+test_requires 'Test::More'      => '0.47';
 
 WriteAll;
